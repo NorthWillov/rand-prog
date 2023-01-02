@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 7%;
+  justify-content: center;
+  text-align: center;
+  margin: 30px 0 30px;
+}
+.programs_block {
+  margin: 50px 0 50px;
+}
+p,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.program {
+  width: 250px;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 15px;
+}
+h2 {
+  font-size: 22px;
+}
+
+span {
+  font-size: 40px;
+}
+
+.funcs {
+  display: flex;
+  justify-content: space-around;
+}
+
+.copy {
+  background-color: aquamarine;
+}
+.minus {
+  background-color: antiquewhite;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 70px;
+}
+
+.redBg {
+  background-color: firebrick;
+}
+
+.greenBg {
+  background-color: lightgreen;
+}
