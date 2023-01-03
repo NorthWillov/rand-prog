@@ -15,7 +15,7 @@ const Program = ({ prog, handleClick, handleCountMinus, counter }) => {
           <b>{prog.counter}</b>
         </span>{" "}
         <button className="minus" onClick={() => handleCountMinus(prog)}>
-          MINUS
+          -
         </button>
       </div>
     </div>
