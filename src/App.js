@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import programsDB from "./db";
 import "./App.css";
 import Programs from "./Programs";
+import Jutro from "./Jutro";
 
 function App() {
   const [progs, setProgs] = useState({
@@ -23,6 +24,7 @@ function App() {
       <Programs title={"REG"} db={programsDB.REG} />
       <Programs title={"DYL"} db={programsDB.DYL} />
       <Programs title={"PRO PO"} db={programsDB.PRO_PO} />
+      <Jutro title={"JUTRO"} db={programsDB.JUTRO} />
     </div>
   );
 }
