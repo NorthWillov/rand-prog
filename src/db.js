@@ -31,8 +31,8 @@ export default {
     { id: 27, program: "PRO_W22_RAPORTY", counter: 0, duration: "01:01" },
     { id: 28, program: "pro_j21_roman_road", counter: 0, duration: "02:10" },
     { id: 29, program: "pro_w20_tomek2", counter: 0, duration: "01:10" },
-    { id: 30, program: "PRO_KTD2022", counter: 0, duration: "08:14" },
-    { id: 31, program: "pro_w19_wszyscy", counter: 0, duration: "19:18" },
+    { id: 30, program: "PRO_KTD2022", counter: 0, duration: "00:08" },
+    { id: 31, program: "pro_w19_wszyscy", counter: 0, duration: "00:19" },
   ],
   // { id: 25, program: "PRO_UPO_Z22_LISTOPAD", counter: 0, , duration: "00:30:00"  },
 
