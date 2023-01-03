@@ -56,3 +56,16 @@ button {
 .greenBg {
   background-color: lightgreen;
 }
+
+.custom-select {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 0 0;
+}
+select {
+  width: 200px;
+  height: 40px;
+  text-align: center;
+  font-size: 22px;
+  border-radius: 10px;
+}

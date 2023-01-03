@@ -53,7 +53,7 @@ function ProLong({ db, title }) {
     return (
         <div className="programs_block">
             <h1>{title}</h1>
-            <div className="container">
+            <div className="custom-select">
                 <select id="week" name="week" onChange={handleChange}>
                     <option value="monday">Monday</option>
                     <option value="tuesday">Tuesday</option>
@@ -63,6 +63,9 @@ function ProLong({ db, title }) {
                     <option value="saturday">Saturday</option>
                     <option value="sunday">Sunday</option>
                 </select>
+            </div>
+
+            <div className="container">
                 {progs.filter(prog => prog.week === week)
                     .map((prog) =>
                         <Program
@@ -74,20 +77,6 @@ function ProLong({ db, title }) {
                         />
                     )}
             </div>
-
-            {/* <div className="container">
-        {progs.map((prog) => {
-          return (
-            <Program
-              counter={counter}
-              key={prog.id}
-              prog={prog}
-              handleClick={handleClick}
-              handleCountMinus={handleCountMinus}
-            />
-          );
-        })}
-      </div> */}
         </div>
     );
 }
