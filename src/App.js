@@ -25,6 +25,8 @@ function App() {
       <Programs title={"DYL"} db={programsDB.DYL} />
       <Programs title={"PRO PO"} db={programsDB.PRO_PO} />
       <Jutro title={"JUTRO"} db={programsDB.JUTRO} />
+      <Programs title={"UPOMNIKI"} db={programsDB.UPOMNIKI} />
+      <Programs title={"ID"} db={programsDB.ID} />
     </div>
   );
 }
