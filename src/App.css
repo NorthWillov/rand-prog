@@ -17,17 +17,17 @@ h2 {
   text-align: center;
 }
 .program {
-  width: 250px;
+  width: 200px;
   padding: 5px;
   margin: 5px;
   border-radius: 15px;
 }
 h2 {
-  font-size: 22px;
+  font-size: 16px;
 }
 
 span {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .funcs {
