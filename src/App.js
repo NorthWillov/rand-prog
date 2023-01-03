@@ -19,14 +19,14 @@ function App() {
 
   return (
     <div>
-      <Programs title={"PRO WEEK"} db={programsDB.PRO_WEEK} />
-      <Programs title={"PRO LONG"} db={programsDB.PRO_LONG} />
-      <Programs title={"REG"} db={programsDB.REG} />
-      <Programs title={"DYL"} db={programsDB.DYL} />
-      <Programs title={"PRO PO"} db={programsDB.PRO_PO} />
-      <Jutro title={"JUTRO"} db={programsDB.JUTRO} />
-      <Programs title={"UPOMNIKI"} db={programsDB.UPOMNIKI} />
-      <Programs title={"ID"} db={programsDB.ID} />
+      <Programs db={programsDB.PRO_WEEK} />
+      <Programs db={programsDB.PRO_LONG} />
+      <Programs db={programsDB.REG} />
+      <Programs db={programsDB.DYL} />
+      <Programs db={programsDB.PRO_PO} />
+      <Jutro db={programsDB.JUTRO} />
+      <Programs db={programsDB.UPOMNIKI} />
+      <Programs db={programsDB.ID} />
     </div>
   );
 }

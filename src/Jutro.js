@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Program from "./Program";
 
-function ProLong({ db, title }) {
+function ProLong({ db }) {
     const [progs, setProgs] = useState(db);
     const [counter, setCounter] = useState(1);
     const [week, setWeek] = useState("monday");
@@ -52,7 +52,6 @@ function ProLong({ db, title }) {
 
     return (
         <div className="programs_block">
-            <h1>{title}</h1>
             <div className="custom-select">
                 <select id="week" name="week" onChange={handleChange}>
                     <option value="monday">Monday</option>
