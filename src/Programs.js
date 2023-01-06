@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Program from "./Program";
 
-function ProLong({ db }) {
-  const [progs, setProgs] = useState(db);
+function ProLong({ title, progs, setProgs }) {
   const [counter, setCounter] = useState(1);
 
   useEffect(() => {
     let isUp = true;
 
-    progs.forEach((prog) => {
+    progs[title].forEach((prog) => {
       if (prog.counter < counter) {
         isUp = false;
       }
@@ -21,34 +20,37 @@ function ProLong({ db }) {
       setCounter(counter + 1);
     }
 
-    if (progs.every((prog) => prog.counter < counter)) {
+    if (progs[title].every((prog) => prog.counter < counter)) {
       setCounter(counter - 1);
     }
-  }, [progs]);
+  }, [progs[title]]);
 
   const handleClick = (prog) => {
-    setProgs(
-      [
-        ...progs.filter((p) => p.id !== prog.id),
+    setProgs({
+      ...progs,
+      [title]: [
+        ...progs[title].filter((p) => p.id !== prog.id),
         { ...prog, counter: prog.counter + 1 },
-      ].sort((a, b) => a.id - b.id)
-    );
+      ].sort((a, b) => a.id - b.id),
+    });
 
     navigator.clipboard.writeText(prog.program);
   };
+
   const handleCountMinus = (prog) => {
-    setProgs(
-      [
-        ...progs.filter((p) => p.id !== prog.id),
+    setProgs({
+      ...progs,
+      [title]: [
+        ...progs[title].filter((p) => p.id !== prog.id),
         { ...prog, counter: prog.counter - 1 },
-      ].sort((a, b) => a.id - b.id)
-    );
+      ].sort((a, b) => a.id - b.id),
+    });
   };
 
   return (
     <div className="programs_block">
       <div className="container">
-        {progs.map((prog) => {
+        {progs[title].map((prog) => {
           return (
             <Program
               counter={counter}

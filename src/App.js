@@ -3,30 +3,22 @@ import programsDB from "./db";
 import "./App.css";
 import Programs from "./Programs";
 import Jutro from "./Jutro";
+import XmlForm from "./XmlForm";
 
 function App() {
-  const [progs, setProgs] = useState({
-    PRO_WEEK: [],
-    PRO_LONG: [],
-    REG: [],
-    DYL: [],
-    PRO_PO: [],
-  });
-
-  useEffect(() => {
-    setProgs(programsDB);
-  }, []);
+  const [progs, setProgs] = useState(programsDB);
 
   return (
     <div>
-      <Programs db={programsDB.PRO_WEEK} />
-      <Programs db={programsDB.PRO_LONG} />
-      <Programs db={programsDB.REG} />
-      <Programs db={programsDB.DYL} />
-      <Programs db={programsDB.PRO_PO} />
-      <Jutro db={programsDB.JUTRO} />
-      <Programs db={programsDB.UPOMNIKI} />
-      <Programs db={programsDB.ID} />
+      <Programs title={"PRO_WEEK"} progs={progs} setProgs={setProgs} />
+      <Programs title={"PRO_LONG"} progs={progs} setProgs={setProgs} />
+      <Programs title={"REG"} progs={progs} setProgs={setProgs} />
+      <Programs title={"DYL"} progs={progs} setProgs={setProgs} />
+      <Programs title={"PRO_PO"} progs={progs} setProgs={setProgs} />
+      <Jutro title={"JUTRO"} progs={progs} setProgs={setProgs} />
+      <Programs title={"ID"} progs={progs} setProgs={setProgs} />
+      <Programs title={"UPOMNIKI"} progs={progs} setProgs={setProgs} />
+      <XmlForm progs={progs} setProgs={setProgs} />
     </div>
   );
 }

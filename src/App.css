@@ -17,7 +17,7 @@ h2 {
   width: 150px;
   border: 1px solid salmon;
   border-radius: 3px;
-  margin: 1px
+  margin: 1px;
 }
 h2 {
   font-size: 13px;
@@ -64,4 +64,49 @@ select {
   text-align: center;
   font-size: 22px;
   border-radius: 10px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 40%;
+  margin: 0 auto;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.xmlPage {
+  display: flex;
+  flex-direction: column;
+}
+.xmlUploadForm {
+  align-self: center;
+  padding: 50px 0;
+}
+.xmlUploadBtn {
+  width: 200px;
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 12px 12px;
+  cursor: pointer;
 }

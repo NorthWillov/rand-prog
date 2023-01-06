@@ -2,9 +2,7 @@ import React from "react";
 
 const Program = ({ prog, handleClick, handleCountMinus, counter }) => {
   return (
-    <div
-      className={`${prog.counter < counter - 2 ? "redBg" : "greenBg"} program`}
-    >
+    <div className={"greenBg program"}>
       <p>{prog.duration}</p>
       <h2>{prog.program}</h2>
       <div className="funcs">
