@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Program from "./Program";
 
-function ProLong({ title, progs, setProgs }) {
+function ProLong({ title, progs, setProgs, color }) {
   const [counter, setCounter] = useState(1);
   const [week, setWeek] = useState("monday");
 
@@ -70,6 +70,7 @@ function ProLong({ title, progs, setProgs }) {
           .filter((prog) => prog.week === week)
           .map((prog) => (
             <Program
+              color={color}
               counter={counter}
               key={prog.id}
               prog={prog}

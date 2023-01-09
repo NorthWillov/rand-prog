@@ -9,19 +9,24 @@ import XmlForm from "./XmlForm";
 function App() {
   const [progs, setProgs] = useState(programsDB);
 
-  return (
-    <div>
-      <Required title={"REQUIRED"} progs={progs} setProgs={setProgs} />
-      <Programs title={"PRO_WEEK"} progs={progs} setProgs={setProgs} />
-      <Programs title={"PRO_LONG"} progs={progs} setProgs={setProgs} />
-      <Programs title={"REG"} progs={progs} setProgs={setProgs} />
-      <Programs title={"DYL"} progs={progs} setProgs={setProgs} />
-      <Programs title={"PRO_PO"} progs={progs} setProgs={setProgs} />
-      <Jutro title={"JUTRO"} progs={progs} setProgs={setProgs} />
-      <Programs title={"ID"} progs={progs} setProgs={setProgs} />
-      <Programs title={"UPOMNIKI"} progs={progs} setProgs={setProgs} />
+  return (<>
+    <Required title={"REQUIRED"} progs={progs} setProgs={setProgs} />
+
+    <div className="programs">
+      <Programs color={"red"} title={"PRO_WEEK"} progs={progs} setProgs={setProgs} />
+      <Programs color={"violet"} title={"PRO_LONG"} progs={progs} setProgs={setProgs} />
+      <Programs color={"yellow"} title={"REG"} progs={progs} setProgs={setProgs} />
+      <Programs color={"blue"} title={"DYL"} progs={progs} setProgs={setProgs} />
+      <Programs color={"black"} title={"PRO_PO"} progs={progs} setProgs={setProgs} />
+      <Programs color={"pink"} title={"UPOMNIKI"} progs={progs} setProgs={setProgs} />
+      <Programs color={"orange"} title={"ID"} progs={progs} setProgs={setProgs} />
+    </div>
+    <div className="rest">
+      <Jutro color={"lime"} title={"JUTRO"} progs={progs} setProgs={setProgs} />
       <XmlForm progs={progs} setProgs={setProgs} />
     </div>
+  </>
+
   );
 }
 

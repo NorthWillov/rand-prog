@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Program from "./Program";
 
-function Programs({ title, progs, setProgs }) {
+function Programs({ title, progs, setProgs, color }) {
   const [counter, setCounter] = useState(1);
 
   useEffect(() => {
@@ -48,21 +48,18 @@ function Programs({ title, progs, setProgs }) {
   };
 
   return (
-    <div className="programs_block">
-      <div className="container">
-        {progs[title].map((prog) => {
-          return (
-            <Program
-              counter={counter}
-              key={prog.id}
-              prog={prog}
-              handleClick={handleClick}
-              handleCountMinus={handleCountMinus}
-            />
-          );
-        })}
-      </div>
-    </div>
+    progs[title].map((prog) => {
+      return (
+        <Program
+          color={color}
+          counter={counter}
+          key={prog.id}
+          prog={prog}
+          handleClick={handleClick}
+          handleCountMinus={handleCountMinus}
+        />
+      );
+    })
   );
 }
 
