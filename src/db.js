@@ -1,4 +1,8 @@
 export default {
+  REQUIRED: [
+    { id: 1001, program: "PRO_UPO_Z23_Styczen", counter: 0, duration: "01:00" },
+    { id: 1002, program: "PRO_Z22_PO_Satelita_1", counter: 0, duration: "00:15" },
+  ],
   PRO_WEEK: [
     { id: 1, program: "PRO_W22_PNCZ_PPM", counter: 0, duration: "00:30" },
     { id: 2, program: "PRO_W22_PN_ZNZ", counter: 0, duration: "00:30" },

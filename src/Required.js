@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Program from "./Program";
 
-function Programs({ title, progs, setProgs }) {
+function Required({ title, progs, setProgs }) {
   const [counter, setCounter] = useState(1);
 
   useEffect(() => {
@@ -48,7 +48,7 @@ function Programs({ title, progs, setProgs }) {
   };
 
   return (
-    <div className="programs_block">
+    <div className="programs_block_required">
       <div className="container">
         {progs[title].map((prog) => {
           return (
@@ -66,4 +66,4 @@ function Programs({ title, progs, setProgs }) {
   );
 }
 
-export default Programs;
+export default Required;

@@ -3,6 +3,7 @@ import programsDB from "./db";
 import "./App.css";
 import Programs from "./Programs";
 import Jutro from "./Jutro";
+import Required from "./Required";
 import XmlForm from "./XmlForm";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <div>
+      <Required title={"REQUIRED"} progs={progs} setProgs={setProgs} />
       <Programs title={"PRO_WEEK"} progs={progs} setProgs={setProgs} />
       <Programs title={"PRO_LONG"} progs={progs} setProgs={setProgs} />
       <Programs title={"REG"} progs={progs} setProgs={setProgs} />
