@@ -24,7 +24,7 @@ function XmlForm({ progs, setProgs }) {
         .reduce(
           (acc, value) => ({
             ...acc,
-            [value.title]: { counter: (acc[value.title]?.counter || 0) + 1, time: [value.time, ...acc[value.title]?.time || ""] },
+            [value.title]: { counter: (acc[value.title]?.counter || 0) + 1, time: [...acc[value.title]?.time || "", value.time] },
           }),
           {}
         );
