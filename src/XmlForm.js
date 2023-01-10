@@ -19,18 +19,17 @@ function XmlForm({ progs, setProgs }) {
       var doc = new XMLParser().parseFromString(readXml);
 
       const counts = doc
-        .getElementsByTagName("FileName")
-        .map((prog) => prog.value.toUpperCase())
+        .getElementsByTagName("Event")
+        .map((prog) => { return { title: prog.children[1].value.toUpperCase(), time: prog.children[2].value } })
         .reduce(
           (acc, value) => ({
             ...acc,
-            [value]: (acc[value] || 0) + 1,
+            [value.title]: { counter: (acc[value.title]?.counter || 0) + 1, time: [value.time, ...acc[value.title]?.time || ""] },
           }),
           {}
         );
 
       setFilesCount(counts);
-      // set new programs
 
       let newDb = {};
 
@@ -39,7 +38,7 @@ function XmlForm({ progs, setProgs }) {
           ...newDb,
           [category]: progs[category].map((prog) => ({
             ...prog,
-            counter: counts[prog.program.toUpperCase()] || 0,
+            counter: counts[prog.program.toUpperCase()]?.counter || 0,
           })),
         };
       }
@@ -67,6 +66,7 @@ function XmlForm({ progs, setProgs }) {
             <tr>
               <th>Program</th>
               <th>Counter</th>
+              <th>Times</th>
             </tr>
           </thead>
           <tbody>
@@ -75,7 +75,13 @@ function XmlForm({ progs, setProgs }) {
               .map((prog) => (
                 <tr key={prog[0]}>
                   <td>{prog[0]}</td>
-                  <td>{prog[1]}</td>
+                  <td>{prog[1].counter}</td>
+                  <td>{prog[1].time.map(t => {
+                    const time = new Date(t);
+
+                    return `${time.getHours()}:${time.getMinutes()}, `
+
+                   })}</td>
                 </tr>
               ))}
           </tbody>
