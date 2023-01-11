@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import XMLParser from "react-xml-parser";
+import { DateTime } from "luxon";
+
 
 function XmlForm({ progs, setProgs }) {
   const [selectedFile, setSelectedFile] = useState();
@@ -76,12 +78,11 @@ function XmlForm({ progs, setProgs }) {
                 <tr key={prog[0]}>
                   <td>{prog[0]}</td>
                   <td>{prog[1].counter}</td>
-                  <td>{prog[1].time.map(t => {
-                    const time = new Date(t);
+                  <td>{prog[1].time.map((t, idx) => {
+                    const time = DateTime.fromJSDate(new Date(t));
 
-                    return `${time.getHours()}:${time.getMinutes()}, `
-
-                   })}</td>
+                    return time.toLocaleString(DateTime.TIME_24_SIMPLE) + (prog[1].time.length - 1 !== idx ? ", " : ".")
+                  })}</td>
                 </tr>
               ))}
           </tbody>
