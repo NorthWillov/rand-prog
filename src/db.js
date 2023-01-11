@@ -5,16 +5,17 @@ export default {
 
   ],
   PRO_Z23: [
-    { id: 1003, program: "PRO_Z23_SW_Aldona", counter: 0, duration: "00:33" },
-    { id: 1004, program: "PRO_Z23_SW_Basia", counter: 0, duration: "00:21" },
-    { id: 1005, program: "PRO_Z23_SW_Boguslawa", counter: 0, duration: "00:35" },
-    { id: 1006, program: "PRO_Z23_SW_Dorota", counter: 0, duration: "00:57" },
-    { id: 1007, program: "PRO_Z23_SW_Elzbieta", counter: 0, duration: "00:29" },
-    { id: 1008, program: "PRO_Z23_SW_Grazyna", counter: 0, duration: "00:14" },
-    { id: 1009, program: "PRO_Z23_SW_Iwona", counter: 0, duration: "00:11" },
-    { id: 1010, program: "PRO_Z23_SW_Joanna", counter: 0, duration: "00:46" },
-    { id: 1011, program: "PRO_Z23_SW_Kasia", counter: 0, duration: "00:13" },
-    { id: 1012, program: "PRO_Z23_SW_Tomasz", counter: 0, duration: "00:11" },
+    { id: 1003, program: "PRO_Z23_SW_Tomasz", counter: 0, duration: "00:11" },
+    { id: 1004, program: "PRO_Z23_SW_Iwona", counter: 0, duration: "00:11" },
+    { id: 1005, program: "PRO_Z23_SW_Kasia", counter: 0, duration: "00:13" },
+    { id: 1006, program: "PRO_Z23_SW_Grazyna", counter: 0, duration: "00:14" },
+    { id: 1007, program: "PRO_Z23_SW_Basia", counter: 0, duration: "00:21" },
+    { id: 1008, program: "PRO_Z23_SW_Elzbieta", counter: 0, duration: "00:29" },
+    { id: 1009, program: "PRO_Z23_SW_Aldona", counter: 0, duration: "00:33" },
+    { id: 1010, program: "PRO_Z23_SW_Boguslawa", counter: 0, duration: "00:35" },
+    { id: 1011, program: "PRO_Z23_SW_Joanna", counter: 0, duration: "00:46" },
+    { id: 1012, program: "PRO_Z23_SW_Dorota", counter: 0, duration: "00:57" },
+
   ],
   PRO_WEEK: [
     { id: 1, program: "PRO_W22_PNCZ_PPM", counter: 0, duration: "00:30" },
