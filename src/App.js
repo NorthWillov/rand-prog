@@ -10,14 +10,17 @@ function App() {
   const [progs, setProgs] = useState(programsDB);
 
   return (<>
-    <Required title={"REQUIRED"} progs={progs} setProgs={setProgs} />
+    <Required color={"red"} title={"REQUIRED"} progs={progs} setProgs={setProgs} />
 
     <div className="programs">
-      <Programs color={"red"} title={"PRO_WEEK"} progs={progs} setProgs={setProgs} />
+      <Programs color={"salmon"} title={"PRO_WEEK"} progs={progs} setProgs={setProgs} />
+      <Programs color={"forestgreen"} title={"PRO_Z23"} progs={progs} setProgs={setProgs} />
       <Programs color={"violet"} title={"PRO_LONG"} progs={progs} setProgs={setProgs} />
       <Programs color={"yellow"} title={"REG"} progs={progs} setProgs={setProgs} />
       <Programs color={"blue"} title={"DYL"} progs={progs} setProgs={setProgs} />
-      <Programs color={"black"} title={"PRO_PO"} progs={progs} setProgs={setProgs} />
+      <Programs color={"black"} title={"PRO_PO_WER"} progs={progs} setProgs={setProgs} />
+      <Programs color={"brown"} title={"PRO_PO_HAS"} progs={progs} setProgs={setProgs} />
+      <Programs color={"cornflowerblue"} title={"PRO_PO_LAF"} progs={progs} setProgs={setProgs} />
       <Programs color={"pink"} title={"UPOMNIKI"} progs={progs} setProgs={setProgs} />
       <Programs color={"orange"} title={"ID"} progs={progs} setProgs={setProgs} />
     </div>

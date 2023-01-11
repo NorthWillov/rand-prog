@@ -2,6 +2,9 @@ export default {
   REQUIRED: [
     { id: 1001, program: "PRO_UPO_Z23_Styczen", counter: 0, duration: "01:00" },
     { id: 1002, program: "PRO_Z22_PO_Satelita_1", counter: 0, duration: "00:15" },
+
+  ],
+  PRO_Z23: [
     { id: 1003, program: "PRO_Z23_SW_Aldona", counter: 0, duration: "00:33" },
     { id: 1004, program: "PRO_Z23_SW_Basia", counter: 0, duration: "00:21" },
     { id: 1005, program: "PRO_Z23_SW_Boguslawa", counter: 0, duration: "00:35" },
@@ -64,7 +67,7 @@ export default {
     { id: 46, program: "dyl_108", counter: 0, duration: "07:10" },
   ],
 
-  PRO_PO: [
+  PRO_PO_WER: [
     { id: 47, program: "PRO_W22_PO_WER01", counter: 0, duration: "00:20" },
     { id: 48, program: "PRO_W22_PO_WER02", counter: 0, duration: "00:20" },
     { id: 49, program: "PRO_W22_PO_WER03", counter: 0, duration: "00:20" },
@@ -74,9 +77,13 @@ export default {
     { id: 53, program: "PRO_W22_PO_WER07", counter: 0, duration: "00:20" },
     { id: 54, program: "PRO_W22_PO_WER08", counter: 0, duration: "00:20" },
     { id: 55, program: "PRO_W22_PO_WER09", counter: 0, duration: "00:20" },
+  ],
+  PRO_PO_HAS: [
     { id: 56, program: "PRO_W22_PO_HAS_1", counter: 0, duration: "00:15" },
     { id: 57, program: "PRO_W22_PO_HAS_2", counter: 0, duration: "00:15" },
     { id: 58, program: "PRO_W22_PO_HAS_3", counter: 0, duration: "00:15" },
+  ],
+  PRO_PO_LAF: [
     { id: 59, program: "PRO_W22_PO_LAF_1", counter: 0, duration: "00:56" },
     { id: 60, program: "PRO_W22_PO_LAF_2", counter: 0, duration: "01:32" },
     { id: 61, program: "PRO_W22_PO_LAF_3", counter: 0, duration: "01:22" },
@@ -85,13 +92,15 @@ export default {
     { id: 64, program: "PRO_W22_PO_LAF_6", counter: 0, duration: "01:32" },
   ],
 
+
+
   UPOMNIKI: [
     { id: 65, program: "PRO_W19_Heidi", counter: 0, duration: "00:06" },
     { id: 66, program: "PRO_W19_Huckabee", counter: 0, duration: "00:06" },
     { id: 67, program: "PRO_W19_Musial", counter: 0, duration: "00:07" },
     { id: 68, program: "PRO_W19_Todd", counter: 0, duration: "00:07" },
   ],
-  
+
   ID: [
     { id: 68, program: "PRO_W22_ID_D1", counter: 0, duration: "00:05" },
     { id: 69, program: "PRO_W22_ID_D2", counter: 0, duration: "00:05" },

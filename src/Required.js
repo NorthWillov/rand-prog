@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Program from "./Program";
 
-function Required({ title, progs, setProgs }) {
+function Required({ title, progs, setProgs, color }) {
   const [counter, setCounter] = useState(1);
 
   useEffect(() => {
@@ -53,6 +53,7 @@ function Required({ title, progs, setProgs }) {
         {progs[title].map((prog) => {
           return (
             <Program
+            color={color}
               counter={counter}
               key={prog.id}
               prog={prog}
