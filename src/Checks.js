@@ -7,6 +7,8 @@ const Checks = () => {
             <label htmlFor="check1"> Check Programs</label><br />
             <input type="checkbox" id="check2" name="check2" />
             <label htmlFor="check2"> Trim Promos</label><br />
+            <input type="checkbox" id="check322" name="check322" />
+            <label htmlFor="check322"> Check ADS</label><br />
             <input type="checkbox" id="check32" name="check32" />
             <label htmlFor="check32"> Check Fixed Events</label><br />
             <input type="checkbox" id="check3" name="check3" />
