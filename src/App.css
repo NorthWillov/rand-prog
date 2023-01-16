@@ -5,6 +5,7 @@
   text-align: center;
   margin: 10px 0 10px;
 }
+
 .programs {
   display: flex;
   justify-content: center;
@@ -18,6 +19,7 @@ h2 {
   padding: 0;
   text-align: center;
 }
+
 .program {
   width: 150px;
   border-radius: 3px;
@@ -41,6 +43,7 @@ span {
 .copy {
   background-color: aquamarine;
 }
+
 .minus {
   background-color: antiquewhite;
 }
@@ -64,6 +67,7 @@ button {
   justify-content: center;
   margin: 40px 0 0 0;
 }
+
 select {
   width: 200px;
   height: 40px;
@@ -94,13 +98,16 @@ tr:nth-child(even) {
   display: flex;
   flex-direction: column;
 }
+
 .xmlUploadForm {
   align-self: center;
   padding: 50px 0;
 }
+
 .xmlUploadBtn {
   width: 200px;
-  background-color: #4caf50; /* Green */
+  background-color: #4caf50;
+  /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -119,4 +126,8 @@ tr:nth-child(even) {
 
 .programs_block {
   max-width: 500px;
+}
+
+.walkthrough {
+  margin: 50px 100px;
 }

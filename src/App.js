@@ -6,6 +6,7 @@ import Jutro from "./Jutro";
 import Required from "./Required";
 import XmlForm from "./XmlForm";
 import RandomProgram from "./RandomProgram"
+import Checks from "./Checks";
 
 function App() {
   const [progs, setProgs] = useState(programsDB);
@@ -28,6 +29,7 @@ function App() {
     <div className="rest">
       <Jutro color={"lime"} title={"JUTRO"} progs={progs} setProgs={setProgs} />
       <RandomProgram />
+      <Checks />
       <XmlForm progs={progs} setProgs={setProgs} />
     </div>
   </>
