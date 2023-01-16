@@ -21,8 +21,8 @@ const Checks = () => {
             <label htmlFor="check6"> Import to MAIN</label><br />
             <input type="checkbox" id="check62" name="check62" />
             <label htmlFor="check62"> Check Time Gaps MAIN</label><br />
-            <input type="checkbox" id="check6" name="check6" />
-            <label htmlFor="check6"> Import to BACKUP</label><br />
+            <input type="checkbox" id="check16" name="check16" />
+            <label htmlFor="check16"> Import to BACKUP</label><br />
             <input type="checkbox" id="check61" name="check61" />
             <label htmlFor="check61"> Check Time Gaps BACKUP</label><br />
         </form>
