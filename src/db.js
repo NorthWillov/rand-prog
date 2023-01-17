@@ -61,10 +61,10 @@ export default {
   ],
 
   DYL: [
-    { id: 46, program: "dyl_108", counter: 0, duration: "07:10" },
-    { id: 40, program: "dyl_101", counter: 0, duration: "08:28" },
-    { id: 41, program: "dyl_102", counter: 0, duration: "08:31" },
-    { id: 45, program: "dyl_107", counter: 0, duration: "08:45" },
+    { id: 40, program: "dyl_108", counter: 0, duration: "07:10" },
+    { id: 41, program: "dyl_101", counter: 0, duration: "08:28" },
+    { id: 42, program: "dyl_102", counter: 0, duration: "08:31" },
+    { id: 43, program: "dyl_107", counter: 0, duration: "08:45" },
     { id: 44, program: "dyl_106", counter: 0, duration: "09:26" },
   ],
 
