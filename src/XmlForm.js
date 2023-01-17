@@ -26,7 +26,7 @@ function XmlForm({ progs, setProgs }) {
         .getElementsByTagName("Event")
         .map((prog) => {
           if (Number(prog.children[18].value) !== 0) {
-            newWarnings.push({ title: prog.children[1].value, time: prog.children[2].value })
+            newWarnings.push({ title: prog.children[1].value, time: DateTime.fromJSDate(new Date(prog.children[2].value)).toLocaleString(DateTime.TIME_24_SIMPLE) })
           }
 
           return {
