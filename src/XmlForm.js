@@ -7,6 +7,7 @@ function XmlForm({ progs, setProgs }) {
   const [selectedFile, setSelectedFile] = useState();
   const [isFilePicked, setIsFilePicked] = useState(false);
   const [filesCount, setFilesCount] = useState({});
+  const [warnings, setWarnings] = useState([])
 
   const changeHandler = (event) => {
     setSelectedFile(event.target.files[0]);
@@ -19,10 +20,20 @@ function XmlForm({ progs, setProgs }) {
     reader.onload = function (e) {
       readXml = e.target.result;
       var doc = new XMLParser().parseFromString(readXml);
+      const newWarnings = []
 
       const counts = doc
         .getElementsByTagName("Event")
-        .map((prog) => { return { title: prog.children[1].value.toUpperCase(), time: prog.children[2].value } })
+        .map((prog) => {
+          if (Number(prog.children[18].value) !== 0) {
+            newWarnings.push({ title: prog.children[1].value, time: prog.children[2].value })
+          }
+
+          return {
+            title: prog.children[1].value.toUpperCase(),
+            time: prog.children[2].value
+          }
+        })
         .reduce(
           (acc, value) => ({
             ...acc,
@@ -30,7 +41,7 @@ function XmlForm({ progs, setProgs }) {
           }),
           {}
         );
-
+      setWarnings(newWarnings)
       setFilesCount(counts);
 
       let newDb = {};
@@ -51,6 +62,12 @@ function XmlForm({ progs, setProgs }) {
 
   return (
     <div className="xmlPage">
+      {warnings.length !== 0 && <div>
+        <ul>
+          {warnings.map(warning => <li key={warning.time} className="warning">WARNING: NA PROGRAM <b>"{warning.title}"</b> O GODZINIE <b>"{warning.time}"</b> JEST USTAWIONY EXIT MANUAL</li>)}
+        </ul>
+      </div>
+      }
       <div className="xmlUploadForm">
         <input
           className="custom-file-upload"

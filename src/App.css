@@ -131,3 +131,7 @@ tr:nth-child(even) {
 .walkthrough {
   margin: 50px 100px;
 }
+
+.warning {
+  color: red;
+}
