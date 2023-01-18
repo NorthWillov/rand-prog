@@ -5,14 +5,14 @@ import { DateTime } from "luxon";
 
 function Gosia({ setIsGosia }) {
   const [selectedFile, setSelectedFile] = useState();
-  const [isFilePicked, setIsFilePicked] = useState(false);
+  const [isFilesPicked, setIsFilesPicked] = useState(false);
   const [filesCount, setFilesCount] = useState({});
   const [inputVal, setInputVal] = useState("");
 
 
   const changeHandler = (event) => {
     setSelectedFile(event.target.files);
-    setIsFilePicked(true);
+    setIsFilesPicked(true);
   };
 
   const handleSubmission = () => {
@@ -35,22 +35,20 @@ function Gosia({ setIsGosia }) {
 
         progArr = [...progArr, ...counts];
 
-        if (i === selectedFile.length - 1) {
-          const multiCounts = progArr.reduce(
-            (acc, value) => ({
-              ...acc,
-              [value.title]: {
-                counter: (acc[value.title]?.counter || 0) + 1,
-                time: [...(acc[value.title]?.time || ""), value.time],
-              },
-            }),
-            {}
-          );
-          setFilesCount(multiCounts);
-        }
-
       };
-
+      reader.onloadend = function () {
+        const multiCounts = progArr.reduce(
+          (acc, value) => ({
+            ...acc,
+            [value.title]: {
+              counter: (acc[value.title]?.counter || 0) + 1,
+              time: [...(acc[value.title]?.time || ""), value.time],
+            },
+          }),
+          {}
+        );
+        setFilesCount(multiCounts);
+      }
       reader.readAsText(selectedFile.item(i));
     }
   };
