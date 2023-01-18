@@ -103,6 +103,10 @@ tr:nth-child(even) {
   align-self: center;
   padding: 50px 0;
 }
+.xmlUploadForm_gosia {
+  display: flex;
+  justify-content: center;
+}
 
 .xmlUploadBtn {
   width: 200px;
@@ -170,4 +174,12 @@ tr:nth-child(even) {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.gosia_input {
+  width: 300px;
+  height: 40px;
+  font-size: 25px;
+  display: flex;
+  margin: 40px auto;
 }

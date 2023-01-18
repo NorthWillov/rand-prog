@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import XMLParser from "react-xml-parser";
 import { DateTime } from "luxon";
 
-function Gosia({ progs, setProgs, setIsGosia }) {
+
+function Gosia({ setIsGosia }) {
   const [selectedFile, setSelectedFile] = useState();
   const [isFilePicked, setIsFilePicked] = useState(false);
   const [filesCount, setFilesCount] = useState({});
+  const [inputVal, setInputVal] = useState("");
+
 
   const changeHandler = (event) => {
     setSelectedFile(event.target.files);
@@ -18,6 +21,7 @@ function Gosia({ progs, setProgs, setIsGosia }) {
     for (let i = 0; i < selectedFile.length; i++) {
       var readXml = null;
       var reader = new FileReader();
+
       reader.onload = function (e) {
         readXml = e.target.result;
         var doc = new XMLParser().parseFromString(readXml);
@@ -28,29 +32,36 @@ function Gosia({ progs, setProgs, setIsGosia }) {
             time: prog.children[2].value,
           };
         });
+
         progArr = [...progArr, ...counts];
+
+        if (i === selectedFile.length - 1) {
+          const multiCounts = progArr.reduce(
+            (acc, value) => ({
+              ...acc,
+              [value.title]: {
+                counter: (acc[value.title]?.counter || 0) + 1,
+                time: [...(acc[value.title]?.time || ""), value.time],
+              },
+            }),
+            {}
+          );
+          setFilesCount(multiCounts);
+        }
+
       };
+
       reader.readAsText(selectedFile.item(i));
     }
-    setTimeout(() => {
-      const multiCounts = progArr.reduce(
-        (acc, value) => ({
-          ...acc,
-          [value.title]: {
-            counter: (acc[value.title]?.counter || 0) + 1,
-            time: [...(acc[value.title]?.time || ""), value.time],
-          },
-        }),
-        {}
-      );
-
-      setFilesCount(multiCounts);
-    }, 1000);
   };
 
   const handleClose = () => {
     setIsGosia(false);
   };
+
+  const handleChange = (e) => {
+    setInputVal(e.target.value)
+  }
 
   return (
     <div id="myModal" className="modal">
@@ -58,7 +69,7 @@ function Gosia({ progs, setProgs, setIsGosia }) {
         <span onClick={handleClose} className="close">
           &times;
         </span>
-        <div className="xmlUploadForm">
+        <div className="xmlUploadForm_gosia">
           <input
             className="custom-file-upload"
             type="file"
@@ -70,8 +81,37 @@ function Gosia({ progs, setProgs, setIsGosia }) {
             Submit
           </button>
         </div>
-        <input />
-        {Object.keys(filesCount).length !== 0 && (
+        <input onChange={handleChange} value={inputVal} className="gosia_input" placeholder="Szukaj" />
+        {Object.keys(filesCount).length !== 0 && inputVal.length > 1 && (
+          <table>
+            <thead>
+              <tr>
+                <th>Program</th>
+                <th>Counter</th>
+                <th>Times</th>
+              </tr>
+            </thead>
+            <tbody>
+              {Object.entries(filesCount)
+                .sort()
+                .filter(prog => prog[0].includes(inputVal.toUpperCase()))
+                .map((prog) => (
+                  <tr key={prog[0]}>
+                    <td>{prog[0]}</td>
+                    <td>{prog[1].counter}</td>
+                    <td>
+                      {prog[1].time.sort().map(
+                        (t) =>
+                          <p key={t}>({DateTime.fromJSDate(new Date(t)).toFormat("f")})</p>
+                      )}
+
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        )}
+        {Object.keys(filesCount).length !== 0 && inputVal.length <= 1 && (
           <table>
             <thead>
               <tr>
@@ -88,9 +128,9 @@ function Gosia({ progs, setProgs, setIsGosia }) {
                     <td>{prog[0]}</td>
                     <td>{prog[1].counter}</td>
                     <td>
-                      {prog[1].time.map(
+                      {prog[1].time.sort().map(
                         (t) =>
-                          `(${DateTime.fromJSDate(new Date(t)).toFormat("f")}) `
+                          <p key={t}>({DateTime.fromJSDate(new Date(t)).toFormat("f")})</p>
                       )}
                     </td>
                   </tr>

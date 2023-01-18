@@ -100,7 +100,7 @@ function App() {
         <XmlForm progs={progs} setProgs={setProgs} />
         <button onClick={handleGosia}>Gosia</button>
         {isGosia && (
-          <Gosia progs={progs} setProgs={setProgs} setIsGosia={setIsGosia} />
+          <Gosia setIsGosia={setIsGosia} />
         )}
       </div>
     </>
