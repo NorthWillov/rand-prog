@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import XMLParser from "react-xml-parser";
 import { DateTime } from "luxon";
+import { debounce } from "./debounce";
 import { v4 as uuidv4 } from "uuid";
 
 function Gosia({ setIsGosia }) {
@@ -15,7 +16,7 @@ function Gosia({ setIsGosia }) {
       setSelectedFile(event.target.files);
       setIsFilesPicked(true);
     } else {
-      alert ("Maksymalna liczba plików to 7");
+      alert("Maksymalna liczba plików to 7");
     }
   };
 
@@ -41,21 +42,25 @@ function Gosia({ setIsGosia }) {
         progArr = [...progArr, ...counts];
       };
       reader.onloadend = function () {
-        const multiCounts = progArr.reduce(
-          (acc, value) => ({
-            ...acc,
-            [value.title]: {
-              counter: (acc[value.title]?.counter || 0) + 1,
-              time: [...(acc[value.title]?.time || ""), value.time],
-            },
-          }),
-          {}
-        );
-        setFilesCount(multiCounts);
+        if (i === selectedFile.length - 1) {
+          console.log("ON END");
+          const multiCounts = progArr.reduce(
+            (acc, value) => ({
+              ...acc,
+              [value.title]: {
+                counter: (acc[value.title]?.counter || 0) + 1,
+                time: [...(acc[value.title]?.time || ""), value.time],
+              },
+            }),
+            {}
+          );
+          setFilesCount(multiCounts);
+
+          setLoader(false);
+        }
       };
       reader.readAsText(selectedFile.item(i));
     }
-    setLoader(false);
   };
 
   const handleClose = () => {
@@ -88,71 +93,75 @@ function Gosia({ setIsGosia }) {
             Submit
           </button>
         </div>
-        <div className="loader-div">
-          {loader && <div className="loader"></div>}
-        </div>
         <input
-          onChange={handleChange}
-          value={inputVal}
+          onChange={debounce(handleChange, 500)}
           className="gosia_input"
           placeholder="Szukaj"
         />
-        {Object.keys(filesCount).length !== 0 && inputVal.length > 1 && (
-          <table>
-            <thead>
-              <tr>
-                <th>Program</th>
-                <th>Counter</th>
-                <th>Times</th>
-              </tr>
-            </thead>
-            <tbody>
-              {Object.entries(filesCount)
-                .sort()
-                .filter((prog) => prog[0].includes(inputVal.toUpperCase()))
-                .map((prog) => (
-                  <tr key={uuidv4()}>
-                    <td>{prog[0]}</td>
-                    <td>{prog[1].counter}</td>
-                    <td>
-                      {prog[1].time.sort().map((t) => (
-                        <p key={uuidv4()}>
-                          ({DateTime.fromJSDate(new Date(t)).toFormat("f")})
-                        </p>
-                      ))}
-                    </td>
+        {loader ? (
+          <div className="loader-div">
+            <div className="loader"></div>
+          </div>
+        ) : (
+          <div>
+            {Object.keys(filesCount).length !== 0 && inputVal.length > 1 && (
+              <table>
+                <thead>
+                  <tr>
+                    <th>Program</th>
+                    <th>Counter</th>
+                    <th>Times</th>
                   </tr>
-                ))}
-            </tbody>
-          </table>
-        )}
-        {Object.keys(filesCount).length !== 0 && inputVal.length <= 1 && (
-          <table>
-            <thead>
-              <tr>
-                <th>Program</th>
-                <th>Counter</th>
-                <th>Times</th>
-              </tr>
-            </thead>
-            <tbody>
-              {Object.entries(filesCount)
-                .sort()
-                .map((prog) => (
-                  <tr key={uuidv4()}>
-                    <td>{prog[0]}</td>
-                    <td>{prog[1].counter}</td>
-                    <td>
-                      {prog[1].time.sort().map((t) => (
-                        <p key={uuidv4()}>
-                          ({DateTime.fromJSDate(new Date(t)).toFormat("f")})
-                        </p>
-                      ))}
-                    </td>
+                </thead>
+                <tbody>
+                  {Object.entries(filesCount)
+                    .sort()
+                    .filter((prog) => prog[0].includes(inputVal.toUpperCase()))
+                    .map((prog) => (
+                      <tr key={uuidv4()}>
+                        <td>{prog[0]}</td>
+                        <td>{prog[1].counter}</td>
+                        <td>
+                          {prog[1].time.sort().map((t) => (
+                            <p key={uuidv4()}>
+                              ({DateTime.fromJSDate(new Date(t)).toFormat("f")})
+                            </p>
+                          ))}
+                        </td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            )}
+            {Object.keys(filesCount).length !== 0 && inputVal.length <= 1 && (
+              <table>
+                <thead>
+                  <tr>
+                    <th>Program</th>
+                    <th>Counter</th>
+                    <th>Times</th>
                   </tr>
-                ))}
-            </tbody>
-          </table>
+                </thead>
+                <tbody>
+                  {Object.entries(filesCount)
+                    .sort()
+                    .map((prog) => (
+                      <tr key={uuidv4()}>
+                        <td>{prog[0]}</td>
+                        <td>{prog[1].counter}</td>
+                        <td>
+                          {prog[1].time.sort().map((t) => (
+                            <p key={uuidv4()}>
+                              ({DateTime.fromJSDate(new Date(t)).toFormat("f")})
+                            </p>
+                          ))}
+                        </td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            )}
+          </div>
         )}
       </div>
     </div>
