@@ -25,12 +25,10 @@ function Gosia({ setIsGosia }) {
     let progArr = [];
 
     for (let i = 0; i < selectedFile.length; i++) {
-      var readXml = null;
       var reader = new FileReader();
 
       reader.onload = function (e) {
-        readXml = e.target.result;
-        var doc = new XMLParser().parseFromString(readXml);
+        var doc = new XMLParser().parseFromString(e.target.result);
 
         const counts = doc.getElementsByTagName("Event").map((prog) => {
           return {
@@ -42,22 +40,18 @@ function Gosia({ setIsGosia }) {
         progArr = [...progArr, ...counts];
       };
       reader.onloadend = function () {
-        if (i === selectedFile.length - 1) {
-          console.log("ON END");
-          const multiCounts = progArr.reduce(
-            (acc, value) => ({
-              ...acc,
-              [value.title]: {
-                counter: (acc[value.title]?.counter || 0) + 1,
-                time: [...(acc[value.title]?.time || ""), value.time],
-              },
-            }),
-            {}
-          );
-          setFilesCount(multiCounts);
-
-          setLoader(false);
-        }
+        const multiCounts = progArr.reduce(
+          (acc, value) => ({
+            ...acc,
+            [value.title]: {
+              counter: (acc[value.title]?.counter || 0) + 1,
+              time: [...(acc[value.title]?.time || ""), value.time],
+            },
+          }),
+          {}
+        );
+        setFilesCount(multiCounts);
+        setLoader(false);
       };
       reader.readAsText(selectedFile.item(i));
     }
@@ -86,8 +80,10 @@ function Gosia({ setIsGosia }) {
             onChange={changeHandler}
           />
           <button
-            disabled={!isFilesPicked}
-            className="xmlUploadBtn"
+            disabled={!isFilesPicked || loader}
+            className={`xmlUploadBtn ${
+              !isFilesPicked || loader ? "disabled" : ""
+            }`}
             onClick={handleSubmission}
           >
             Submit
