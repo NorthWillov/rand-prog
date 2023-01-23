@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/rand-prog/static/css/main.5528a7ce.css",
-    "main.js": "/rand-prog/static/js/main.7c8aed36.js",
+    "main.css": "/rand-prog/static/css/main.f9a2a6b9.css",
+    "main.js": "/rand-prog/static/js/main.d3f6bed6.js",
     "index.html": "/rand-prog/index.html",
-    "main.5528a7ce.css.map": "/rand-prog/static/css/main.5528a7ce.css.map",
-    "main.7c8aed36.js.map": "/rand-prog/static/js/main.7c8aed36.js.map"
+    "main.f9a2a6b9.css.map": "/rand-prog/static/css/main.f9a2a6b9.css.map",
+    "main.d3f6bed6.js.map": "/rand-prog/static/js/main.d3f6bed6.js.map"
   },
   "entrypoints": [
-    "static/css/main.5528a7ce.css",
-    "static/js/main.7c8aed36.js"
+    "static/css/main.f9a2a6b9.css",
+    "static/js/main.d3f6bed6.js"
   ]
 }
