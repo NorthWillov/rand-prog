@@ -12,12 +12,12 @@ function Gosia({ setIsGosia }) {
   const [inputVal, setInputVal] = useState("");
 
   const changeHandler = (event) => {
-    if (event.target.files.length <= 7) {
-      setSelectedFile(event.target.files);
-      setIsFilesPicked(true);
-    } else {
+    if (event.target.files.length > 7) {
       alert("Maksymalna liczba plików to 7");
+      return;
     }
+    setSelectedFile(event.target.files);
+    setIsFilesPicked(true);
   };
 
   const handleSubmission = () => {
@@ -30,14 +30,12 @@ function Gosia({ setIsGosia }) {
       reader.onload = function (e) {
         var doc = new XMLParser().parseFromString(e.target.result);
 
-        const counts = doc.getElementsByTagName("Event").map((prog) => {
-          return {
+        doc.getElementsByTagName("Event").forEach((prog) => {
+          progArr.push({
             title: prog.children[1].value.toUpperCase(),
             time: prog.children[2].value,
-          };
+          });
         });
-
-        progArr = [...progArr, ...counts];
       };
       reader.onloadend = function () {
         const multiCounts = progArr.reduce(

@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import programsDB from "./db";
 import "./App.css";
 import Programs from "./Programs";
 import Jutro from "./Jutro";
 import Required from "./Required";
 import XmlForm from "./XmlForm";
-import RandomProgram from "./RandomProgram";
-import Checks from "./Checks";
 import Gosia from "./Gosia";
 
 function App() {
@@ -95,13 +93,11 @@ function App() {
           progs={progs}
           setProgs={setProgs}
         />
-        <RandomProgram />
-        <Checks />
         <XmlForm progs={progs} setProgs={setProgs} />
-        <button onClick={handleGosia}>Gosia</button>
-        {isGosia && (
-          <Gosia setIsGosia={setIsGosia} />
-        )}
+        <button onClick={handleGosia} className="glow" type="button">
+          Tryb Gosia
+        </button>
+        {isGosia && <Gosia setIsGosia={setIsGosia} />}
       </div>
     </>
   );
