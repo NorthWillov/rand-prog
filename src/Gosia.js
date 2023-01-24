@@ -14,6 +14,7 @@ function Gosia({ setIsGosia }) {
   const changeHandler = (event) => {
     if (event.target.files.length > 7) {
       alert("Maksymalna liczba plików to 7");
+      setIsFilesPicked(false);
       return;
     }
     setSelectedFile(event.target.files);
