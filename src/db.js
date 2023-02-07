@@ -1,8 +1,9 @@
 export default {
   REQUIRED: [
-    { id: 1001, program: "PRO_Z22_PO_Satelita_2", counter: 0, duration: "00:15" },
-    { id: 1002, program: "PRO_UPO_Z23_Styczen", counter: 0, duration: "01:00" },
-    { id: 1003, program: "PRO_Z23_TBNGO", counter: 0, duration: "00:29" },
+    { id: 2001, program: "PRO_Z23_1procent37", counter: 0, duration: "00:37" },
+    { id: 2002, program: "PRO_Z23_1procent15_2", counter: 0, duration: "00:15" },
+    { id: 2003, program: "PRO_UPO_Z23_Styczen", counter: 0, duration: "01:00" },
+    { id: 2004, program: "PRO_Z23_TBNGO", counter: 0, duration: "00:29" },
   ],
 
   PRO_Z23: [
