@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import XMLParser from "react-xml-parser";
+import PieRechart from "./components/PieRechart";
 import { DateTime } from "luxon";
 
 function XmlForm({ progs, setProgs }) {
@@ -21,9 +22,12 @@ function XmlForm({ progs, setProgs }) {
       var doc = new XMLParser().parseFromString(readXml);
       const newWarnings = [];
 
+      const startTimesArr = doc.getElementsByTagName("StartTime");
+
       const counts = doc
         .getElementsByTagName("Event")
-        .map((prog) => {
+        .map((prog, idx) => {
+          // Check if "Event Exit" is not equals to 0 and display a warning about it
           if (Number(prog.children[18].value) !== 0) {
             newWarnings.push({
               title: prog.children[1].value,
@@ -36,6 +40,10 @@ function XmlForm({ progs, setProgs }) {
           return {
             title: prog.children[1].value.toUpperCase(),
             time: prog.children[2].value,
+            category: prog.children[28].value,
+            duration:
+              new Date(startTimesArr[idx + 1]?.value).getTime() -
+                new Date(prog.children[2].value).getTime() || 4000,
           };
         })
         .reduce(
@@ -44,6 +52,8 @@ function XmlForm({ progs, setProgs }) {
             [value.title]: {
               counter: (acc[value.title]?.counter || 0) + 1,
               time: [...(acc[value.title]?.time || ""), value.time],
+              category: value.category,
+              duration: value.duration,
             },
           }),
           {}
@@ -51,8 +61,8 @@ function XmlForm({ progs, setProgs }) {
       setWarnings(newWarnings);
       setFilesCount(counts);
 
+      // recalculate counters after playlist submit
       let newDb = {};
-
       for (const category in progs) {
         newDb = {
           ...newDb,
@@ -93,34 +103,37 @@ function XmlForm({ progs, setProgs }) {
         </button>
       </div>
       {Object.keys(filesCount).length !== 0 && (
-        <table>
-          <thead>
-            <tr>
-              <th>Program</th>
-              <th>Counter</th>
-              <th>Times</th>
-            </tr>
-          </thead>
-          <tbody>
-            {Object.entries(filesCount)
-              .sort()
-              .map((prog) => (
-                <tr key={prog[0]}>
-                  <td>{prog[0]}</td>
-                  <td>{prog[1].counter}</td>
-                  <td>
-                    {prog[1].time
-                      .map((t) =>
-                        DateTime.fromJSDate(new Date(t)).toLocaleString(
-                          DateTime.TIME_24_SIMPLE
+        <>
+          <PieRechart files={filesCount} />
+          <table>
+            <thead>
+              <tr>
+                <th>Program</th>
+                <th>Counter</th>
+                <th>Times</th>
+              </tr>
+            </thead>
+            <tbody>
+              {Object.entries(filesCount)
+                .sort()
+                .map((prog) => (
+                  <tr key={prog[0]}>
+                    <td>{prog[0]}</td>
+                    <td>{prog[1].counter}</td>
+                    <td>
+                      {prog[1].time
+                        .map((t) =>
+                          DateTime.fromJSDate(new Date(t)).toLocaleString(
+                            DateTime.TIME_24_SIMPLE
+                          )
                         )
-                      )
-                      .join(", ")}
-                  </td>
-                </tr>
-              ))}
-          </tbody>
-        </table>
+                        .join(", ")}
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </>
       )}
     </div>
   );

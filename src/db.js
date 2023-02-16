@@ -9,6 +9,11 @@ export default {
     },
     { id: 2003, program: "PRO_UPO_Z23_LUTY", counter: 0, duration: "01:09" },
     { id: 2004, program: "PRO_Z23_TBNGO", counter: 0, duration: "00:29" },
+    { id: 2005, program: "PRO_Z23_J_KWMZ", counter: 0, duration: "00:30" },
+    { id: 2006, program: "PRO_Z23_WTCZ_KWMZ", counter: 0, duration: "00:30" },
+    { id: 2007, program: "PRO_Z23_ZC_KWMZ", counter: 0, duration: "00:05" },
+    { id: 2008, program: "PRO_Z23_PREM_ITME", counter: 0, duration: "01:00" },
+    { id: 2009, program: "PRO_Z23_WTCZ_ITME", counter: 0, duration: "01:00" },
   ],
 
   PRO_Z23: [
