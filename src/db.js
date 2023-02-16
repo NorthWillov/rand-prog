@@ -15,6 +15,7 @@ export default {
     { id: 2007, program: "PRO_Z23_ZC_KWMZ", counter: 0, duration: "00:05" },
     { id: 2008, program: "PRO_Z23_PREM_ITME", counter: 0, duration: "01:00" },
     { id: 2009, program: "PRO_Z23_WTCZ_ITME", counter: 0, duration: "01:00" },
+    { id: 2010, program: "PRO_Z23_PREM_AWM", counter: 0, duration: "00:30" },
   ],
 
   PRO_Z23: [
