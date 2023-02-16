@@ -1,5 +1,6 @@
 export default {
   REQUIRED: [
+    { id: 2000, program: "PRO_Z23_1procent35", counter: 0, duration: "00:35" },
     { id: 2001, program: "PRO_Z23_1procent37", counter: 0, duration: "00:37" },
     {
       id: 2002,
