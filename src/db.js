@@ -346,4 +346,8 @@ export default {
       week: "sunday",
     },
   ],
+  ADS: [
+    { id: 501, program: "ADV_AWM_1602_1", counter: 0, duration: "03:46" },
+    { id: 502, program: "ADV_AWM_1602_2", counter: 0, duration: "04:35" },
+  ],
 };

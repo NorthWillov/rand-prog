@@ -85,6 +85,12 @@ function App() {
           progs={progs}
           setProgs={setProgs}
         />
+        <Programs
+          color={"palevioletred"}
+          title={"ADS"}
+          progs={progs}
+          setProgs={setProgs}
+        />
       </div>
       <div className="rest">
         <Jutro
