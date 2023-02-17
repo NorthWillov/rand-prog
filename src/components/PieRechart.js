@@ -69,6 +69,9 @@ const PieRechart = ({ files }) => {
 
   return (
     <div style={{ margin: "0 auto" }}>
+      <h3 style={{ textAlign: "center", marginBottom: "-50px" }}>
+        {convertMsToTime(times.film + times.promotion)}
+      </h3>
       <PieChart width={400} height={400}>
         <Pie
           data={data}

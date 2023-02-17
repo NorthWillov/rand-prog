@@ -10,8 +10,6 @@ export const convertMsToTime = (milliseconds) => {
   seconds = seconds % 60;
   minutes = minutes % 60;
 
-  hours = hours % 24;
-
   return `${padTo2Digits(hours)}:${padTo2Digits(minutes)}:${padTo2Digits(
     seconds
   )}`;
