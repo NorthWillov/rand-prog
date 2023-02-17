@@ -268,7 +268,10 @@ export default {
     },
   ],
   ADS: [
-    { id: 501, program: "ADV_AWM_1602_1", counter: 0, duration: "03:46" },
-    { id: 502, program: "ADV_AWM_1602_2", counter: 0, duration: "04:35" },
+    { id: 501, program: "ADV_AWM_0223_1", counter: 0, duration: "03:46" },
+    { id: 502, program: "ADV_AWM_0223_2", counter: 0, duration: "04:11" },
+    { id: 503, program: "ADV_AWM_0223_3", counter: 0, duration: "04:35" },
+    { id: 504, program: "ADV_AWM_0223_4", counter: 0, duration: "03:33" },
+    { id: 505, program: "ADV_AWM_0223_5", counter: 0, duration: "03:33" },
   ],
 };
