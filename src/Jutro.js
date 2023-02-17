@@ -67,7 +67,7 @@ function ProLong({ title, progs, setProgs, color }) {
 
       <div className="container">
         {progs[title]
-          .filter((prog) => prog.week === week)
+          .filter((prog) => prog.week.includes(week))
           .map((prog) => (
             <Program
               color={color}
