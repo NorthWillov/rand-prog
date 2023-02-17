@@ -9,13 +9,9 @@ export default {
       duration: "00:15",
     },
     { id: 2003, program: "PRO_UPO_Z23_LUTY", counter: 0, duration: "01:09" },
-    { id: 2004, program: "PRO_Z23_TBNGO", counter: 0, duration: "00:29" },
-    { id: 2005, program: "PRO_Z23_J_KWMZ", counter: 0, duration: "00:30" },
-    { id: 2006, program: "PRO_Z23_WTCZ_KWMZ", counter: 0, duration: "00:30" },
-    { id: 2007, program: "PRO_Z23_ZC_KWMZ", counter: 0, duration: "00:05" },
-    { id: 2008, program: "PRO_Z23_PREM_ITME", counter: 0, duration: "01:00" },
-    { id: 2009, program: "PRO_Z23_WTCZ_ITME", counter: 0, duration: "01:00" },
-    { id: 2010, program: "PRO_Z23_PREM_AWM", counter: 0, duration: "00:30" },
+    { id: 2004, program: "PRO_Z23_PREM_ITME", counter: 0, duration: "01:00" },
+
+    { id: 2005, program: "PRO_Z23_TBNGO", counter: 0, duration: "00:29" },
   ],
 
   PRO_Z23: [
@@ -37,7 +33,9 @@ export default {
   ],
 
   PRO_WEEK: [
-    { id: 1, program: "PRO_Z22_SB_DTH_S7", counter: 0, duration: "00:29" },
+    { id: -1, program: "PRO_Z23_WTCZ_ITME", counter: 0, duration: "01:00" },
+    { id: 0, program: "PRO_Z23_PREM_AWM", counter: 0, duration: "00:30" },
+    { id: 1, program: "PRO_Z23_WTCZ_KWMZ", counter: 0, duration: "00:30" },
     { id: 2, program: "PRO_W22_PNCZ_PPM", counter: 0, duration: "00:30" },
     { id: 3, program: "PRO_W22_PN_ZNZ", counter: 0, duration: "00:30" },
     { id: 4, program: "PRO_W22_PNSR_SMKTN", counter: 0, duration: "00:30" },
@@ -51,7 +49,7 @@ export default {
     { id: 12, program: "PRO_W22_CZ_DS", counter: 0, duration: "00:30" },
     { id: 13, program: "PRO_W22_SRCZPT_DWAWG", counter: 0, duration: "00:30" },
     { id: 14, program: "PRO_W22_WTCZ_DTH", counter: 0, duration: "00:30" },
-    { id: 15, program: "PRO_W22_WTCZ_KWMZ", counter: 0, duration: "00:30" },
+    { id: 15, program: "PRO_Z22_SB_DTH_S7", counter: 0, duration: "00:29" },
     { id: 16, program: "PRO_W22_PT_ITA", counter: 0, duration: "00:30" },
     { id: 17, program: "PRO_W22_PTND_JPLLGL", counter: 0, duration: "00:30" },
     { id: 18, program: "PRO_W22_PTND_VOTR", counter: 0, duration: "00:30" },
@@ -144,7 +142,7 @@ export default {
     },
     {
       id: 100,
-      program: "PRO_W22_J_KWMZ",
+      program: "PRO_Z23_J_KWMZ",
       counter: 0,
       duration: "00:30",
       week: "monday",
@@ -221,7 +219,7 @@ export default {
     },
     {
       id: 112,
-      program: "PRO_W22_J_KWMZ",
+      program: "PRO_Z23_J_KWMZ",
       counter: 0,
       duration: "00:30",
       week: "wednesday",

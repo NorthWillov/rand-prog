@@ -36,14 +36,16 @@ function XmlForm({ progs, setProgs }) {
               ).toLocaleString(DateTime.TIME_24_SIMPLE),
             });
           }
+          // Calculating miliseconds from files
+          const ms =
+            new Date(startTimesArr[idx + 1]?.value).getTime() -
+              new Date(prog.children[2].value).getTime() || 4000;
 
           return {
             title: prog.children[1].value.toUpperCase(),
             time: prog.children[2].value,
             category: prog.children[28].value,
-            duration:
-              new Date(startTimesArr[idx + 1]?.value).getTime() -
-                new Date(prog.children[2].value).getTime() || 4000,
+            duration: ms,
           };
         })
         .reduce(
