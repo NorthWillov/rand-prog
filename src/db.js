@@ -33,7 +33,7 @@ export default {
   PRO_WEEK: [
     { id: -1, program: "PRO_Z23_WTCZ_ITME", counter: 0, duration: "01:00" },
     { id: 0, program: "PRO_Z23_PREM_AWM", counter: 0, duration: "00:30" },
-    { id: 1, program: "PRO_Z23_WTCZ_KWMZ", counter: 0, duration: "00:30" },
+    { id: 1, program: "PRO_W23_WTCZ_KWMZ", counter: 0, duration: "00:30" },
     { id: 2, program: "PRO_W22_PNCZ_PPM", counter: 0, duration: "00:30" },
     { id: 3, program: "PRO_W22_PN_ZNZ", counter: 0, duration: "00:30" },
     { id: 4, program: "PRO_W22_PNSR_SMKTN", counter: 0, duration: "00:30" },
@@ -138,7 +138,7 @@ export default {
     },
     {
       id: 100,
-      program: "PRO_Z23_J_KWMZ",
+      program: "PRO_W23_J_KWMZ",
       counter: 0,
       duration: "00:30",
       week: ["monday", "wednesday"],
