@@ -8,7 +8,6 @@ export default {
       counter: 0,
       duration: "00:15",
     },
-    { id: 2003, program: "PRO_UPO_Z23_LUTY", counter: 0, duration: "01:09" },
     { id: 2005, program: "PRO_Z23_TBNGO", counter: 0, duration: "00:29" },
   ],
 
@@ -31,7 +30,7 @@ export default {
   ],
 
   PRO_WEEK: [
-    { id: -1, program: "PRO_Z23_WTCZ_ITME", counter: 0, duration: "01:00" },
+    { id: -1, program: "PRO_W23_WTCZ_ITME", counter: 0, duration: "00:30" },
     { id: 0, program: "PRO_Z23_PREM_AWM", counter: 0, duration: "00:30" },
     { id: 1, program: "PRO_W23_WTCZ_KWMZ", counter: 0, duration: "00:30" },
     { id: 2, program: "PRO_W22_PNCZ_PPM", counter: 0, duration: "00:30" },
@@ -262,12 +261,5 @@ export default {
       duration: "00:30",
       week: ["sunday"],
     },
-  ],
-  ADS: [
-    { id: 501, program: "ADV_AWM_0223_1", counter: 0, duration: "03:46" },
-    { id: 502, program: "ADV_AWM_0223_2", counter: 0, duration: "04:11" },
-    { id: 503, program: "ADV_AWM_0223_3", counter: 0, duration: "04:35" },
-    { id: 504, program: "ADV_AWM_0223_4", counter: 0, duration: "03:33" },
-    { id: 505, program: "ADV_AWM_0223_5", counter: 0, duration: "03:33" },
   ],
 };
