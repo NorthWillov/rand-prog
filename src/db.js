@@ -9,6 +9,12 @@ export default {
       duration: "00:15",
     },
     { id: 2005, program: "PRO_Z23_TBNGO", counter: 0, duration: "00:29" },
+    {
+      id: 2006,
+      program: "PRO_UPO_W23_KWIECIEN",
+      counter: 0,
+      duration: "01:12",
+    },
   ],
 
   PRO_Z23: [
