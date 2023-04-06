@@ -15,6 +15,18 @@ export default {
       counter: 0,
       duration: "01:12",
     },
+    {
+      id: 2007,
+      program: "PRO_W23_WIELKANOC",
+      counter: 0,
+      duration: "00:25",
+    },
+    {
+      id: 2008,
+      program: "PRO_reklama_zewnetrzna",
+      counter: 0,
+      duration: "00:05",
+    },
   ],
 
   PRO_Z23: [
