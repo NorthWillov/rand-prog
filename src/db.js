@@ -14,18 +14,21 @@ export default {
       program: "PRO_UPO_W23_KWIECIEN",
       counter: 0,
       duration: "01:12",
+      info: "Co 2 program",
     },
     {
       id: 2007,
       program: "PRO_W23_WIELKANOC",
       counter: 0,
       duration: "00:25",
+      info: "Co 2 program do poniedziałku (10.04) do godz 14",
     },
     {
       id: 2008,
       program: "PRO_reklama_zewnetrzna",
       counter: 0,
       duration: "00:05",
+      info: "Wstawiać przed każdą reklamą zewnętrzną (nie TBN'u), Tymek będzie dawał znać które - narazie przed wszystkimi reklamami AWM",
     },
   ],
 

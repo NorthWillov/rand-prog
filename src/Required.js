@@ -53,7 +53,7 @@ function Required({ title, progs, setProgs, color }) {
         {progs[title].map((prog) => {
           return (
             <Program
-            color={color}
+              color={color}
               counter={counter}
               key={prog.id}
               prog={prog}
