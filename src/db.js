@@ -11,7 +11,7 @@ export default {
     { id: 2005, program: "PRO_Z23_TBNGO", counter: 0, duration: "00:29" },
     {
       id: 2006,
-      program: "PRO_UPO_W23_KWIECIEN",
+      program: "PRO_UPO_W23_KWIECIEN_new",
       counter: 0,
       duration: "01:12",
       info: "Co 2 program",
@@ -22,6 +22,13 @@ export default {
       counter: 0,
       duration: "00:05",
       info: "Wstawiać przed każdą reklamą zewnętrzną (nie TBN'u), Tymek będzie dawał znać które - narazie przed wszystkimi reklamami AWM",
+    },
+    {
+      id: 2008,
+      program: "PRO_W23_Darowizna",
+      counter: 0,
+      duration: "00:40",
+      info: "Co 3 lub 4 program",
     },
   ],
 
