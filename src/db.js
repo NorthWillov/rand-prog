@@ -30,6 +30,13 @@ export default {
       duration: "00:40",
       info: "Co 3 lub 4 program",
     },
+    {
+      id: 2009,
+      program: "ADV_W23_iglak",
+      counter: 0,
+      duration: "00:30",
+      info: "Od 1 maja do 31 czerwca, o godzinach: 9:00, 13:00, 15:00, 19:30, 22:30",
+    },
   ],
 
   PRO_Z23: [
