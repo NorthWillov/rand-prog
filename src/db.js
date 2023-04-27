@@ -87,7 +87,7 @@ export default {
   PRO_LONG: [
     { id: 26, program: "PRO_KTD2022", counter: 0, duration: "00:08" },
     { id: 27, program: "pro_w19_wszyscy", counter: 0, duration: "00:19" },
-    { id: 29, program: "PRO_Z22_MISJA", counter: 0, duration: "01:24" },
+    { id: 29, program: "PRO_W23_MISJA", counter: 0, duration: "01:01" },
     { id: 30, program: "pro_j21_roman_road", counter: 0, duration: "02:10" },
   ],
 
