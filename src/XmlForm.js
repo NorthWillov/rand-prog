@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import XMLParser from "react-xml-parser";
 import PieRechart from "./components/PieRechart";
+import oldProgsDb from "./oldProgsDb";
 import { DateTime } from "luxon";
 
 function XmlForm({ progs, setProgs }) {
@@ -8,6 +9,7 @@ function XmlForm({ progs, setProgs }) {
   const [isFilePicked, setIsFilePicked] = useState(false);
   const [filesCount, setFilesCount] = useState({});
   const [warnings, setWarnings] = useState([]);
+  const [foundedExpiredProgs, setFoundedExpiredProgs] = useState([]);
 
   const changeHandler = (event) => {
     setSelectedFile(event.target.files[0]);
@@ -21,6 +23,7 @@ function XmlForm({ progs, setProgs }) {
       readXml = e.target.result;
       var doc = new XMLParser().parseFromString(readXml);
       const newWarnings = [];
+      const passedOldProgs = [];
 
       const startTimesArr = doc.getElementsByTagName("StartTime");
 
@@ -36,6 +39,14 @@ function XmlForm({ progs, setProgs }) {
               ).toLocaleString(DateTime.TIME_24_SIMPLE),
             });
           }
+          // Check if program is expired and it should not be on the playlist
+          if (
+            oldProgsDb.includes(prog.children[1].value.toUpperCase()) &&
+            !passedOldProgs.includes(prog.children[1].value.toUpperCase())
+          ) {
+            passedOldProgs.push(prog.children[1].value);
+          }
+
           // Calculating miliseconds from files
           const ms =
             new Date(startTimesArr[idx + 1]?.value).getTime() -
@@ -61,6 +72,7 @@ function XmlForm({ progs, setProgs }) {
           {}
         );
       setWarnings(newWarnings);
+      setFoundedExpiredProgs(passedOldProgs);
       setFilesCount(counts);
 
       // recalculate counters after playlist submit
@@ -88,6 +100,18 @@ function XmlForm({ progs, setProgs }) {
               <li key={warning.time} className="warning">
                 WARNING: NA PROGRAM <b>"{warning.title}"</b> O GODZINIE{" "}
                 <b>"{warning.time}"</b> JEST USTAWIONY EXIT MANUAL
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {foundedExpiredProgs.length !== 0 && (
+        <div>
+          <ul>
+            {foundedExpiredProgs.map((prog, idx) => (
+              <li key={idx} className="warning">
+                WARNING: PLIK <b>"{prog}"</b> ZOSTAŁ WPISANY W PLAYLISTĘ, JEST ZASTARZAŁY I MUSI BYĆ
+                ZAMIENIONY NA NOWY!
               </li>
             ))}
           </ul>
