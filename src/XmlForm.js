@@ -44,7 +44,7 @@ function XmlForm({ progs, setProgs }) {
             oldProgsDb.includes(prog.children[1].value.toUpperCase()) &&
             !passedOldProgs.includes(prog.children[1].value.toUpperCase())
           ) {
-            passedOldProgs.push(prog.children[1].value);
+            passedOldProgs.push(prog.children[1].value.toUpperCase());
           }
 
           // Calculating miliseconds from files
@@ -110,8 +110,8 @@ function XmlForm({ progs, setProgs }) {
           <ul>
             {foundedExpiredProgs.map((prog, idx) => (
               <li key={idx} className="warning">
-                WARNING: PLIK <b>"{prog}"</b> ZOSTAŁ WPISANY W PLAYLISTĘ, JEST ZASTARZAŁY I MUSI BYĆ
-                ZAMIENIONY NA NOWY!
+                WARNING: PLIK <b>"{prog}"</b> ZOSTAŁ WPISANY W PLAYLISTĘ, JEST
+                ZASTARZAŁY I MUSI BYĆ ZAMIENIONY NA NOWY!
               </li>
             ))}
           </ul>
