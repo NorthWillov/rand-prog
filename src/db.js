@@ -2,13 +2,6 @@ export default {
   REQUIRED: [
     { id: 2005, program: "PRO_Z23_TBNGO", counter: 0, duration: "00:29" },
     {
-      id: 2006,
-      program: "PRO_UPO_W23_KWIECIEN_new",
-      counter: 0,
-      duration: "01:12",
-      info: "Co 2 program",
-    },
-    {
       id: 2007,
       program: "PRO_reklama_zewnetrzna",
       counter: 0,
