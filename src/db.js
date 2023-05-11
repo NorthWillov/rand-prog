@@ -22,6 +22,13 @@ export default {
       duration: "00:30",
       info: "Od 1 maja do 31 czerwca, o godzinach: 9:00, 13:00, 15:00, 19:30, 22:30",
     },
+    {
+      id: 2010,
+      program: "PRO_W23_Spotkanie",
+      counter: 0,
+      duration: "00:38",
+      info: "co drugi program od 13 maja do 4 czerwca",
+    },
   ],
 
   PRO_Z23: [
