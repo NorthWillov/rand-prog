@@ -31,7 +31,7 @@ export default {
     },
     {
       id: 2011,
-      program: "ADV_W23_PRAYER FOR UKRAINE",
+      program: "ADV_W23_PRAYER_FOR_UKRAINE",
       counter: 0,
       duration: "01:23",
       info: "do 23 maja 2 razy na dobe miedzy 1 a 4 w nocy",
