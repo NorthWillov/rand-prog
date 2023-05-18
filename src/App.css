@@ -101,7 +101,7 @@ tr:nth-child(even) {
 
 .xmlUploadForm {
   align-self: center;
-  padding: 50px 0;
+  padding: 50px 0 10px;
 }
 .xmlUploadForm_gosia {
   display: flex;

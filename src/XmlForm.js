@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import XMLParser from "react-xml-parser";
 import PieRechart from "./components/PieRechart";
 import oldProgsDb from "./oldProgsDb";
+import TestFilesCorrectTimes from "./components/TestFilesCorrectTimes";
 import { DateTime } from "luxon";
 
 function XmlForm({ progs, setProgs }) {
@@ -10,10 +11,17 @@ function XmlForm({ progs, setProgs }) {
   const [filesCount, setFilesCount] = useState({});
   const [warnings, setWarnings] = useState([]);
   const [foundedExpiredProgs, setFoundedExpiredProgs] = useState([]);
+  const [isTestFilesTimesChecked, setIsTestFilesTimesChecked] = useState(false);
+  const [showTestFilesTimesChecked, setShowTestFilesTimesChecked] =
+    useState(false);
 
   const changeHandler = (event) => {
     setSelectedFile(event.target.files[0]);
     setIsFilePicked(true);
+  };
+
+  const handleCheckboxChange = () => {
+    setIsTestFilesTimesChecked(!isTestFilesTimesChecked);
   };
 
   const handleSubmission = () => {
@@ -75,6 +83,10 @@ function XmlForm({ progs, setProgs }) {
       setFoundedExpiredProgs(passedOldProgs);
       setFilesCount(counts);
 
+      isTestFilesTimesChecked
+        ? setShowTestFilesTimesChecked(true)
+        : setShowTestFilesTimesChecked(false);
+
       // recalculate counters after playlist submit
       let newDb = {};
       for (const category in progs) {
@@ -128,9 +140,20 @@ function XmlForm({ progs, setProgs }) {
           Submit
         </button>
       </div>
+      <label style={{ margin: "0 auto 50px" }}>
+        <input
+          type="checkbox"
+          checked={isTestFilesTimesChecked}
+          onChange={handleCheckboxChange}
+        />
+        Submit with checks of files that are in the correct times
+      </label>
       {Object.keys(filesCount).length !== 0 && (
         <>
-          <PieRechart files={filesCount} />
+          {showTestFilesTimesChecked && (
+            <TestFilesCorrectTimes filesCount={filesCount} />
+          )}
+          {/* <PieRechart files={filesCount} /> */}
           <table>
             <thead>
               <tr>
