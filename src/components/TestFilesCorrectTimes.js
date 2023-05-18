@@ -3,7 +3,7 @@ import { DateTime } from "luxon";
 
 const TestFilesCorrectTimes = React.memo(({ filesCount }) => {
   const [messages, setMessages] = useState([]);
-  
+
   const filesInProperTime = {
     ADV_W23_IGLAK: {
       times: ["09:00", "13:00", "15:00", "19:30", "22:30"],
@@ -29,16 +29,25 @@ const TestFilesCorrectTimes = React.memo(({ filesCount }) => {
         const properTimes = filesInProperTime[targetKey].times;
         const actualTimes = filesCount[targetKey].time;
 
-        if (properTimes.length !== actualTimes.length) {
-          messArr.push(
-            "There is a missing file on the playlist that should be placed"
-          );
-          console.log("ERROR");
-          continue;
-        }
+        // if (properTimes.length !== actualTimes.length) {
+        //   messArr.push(
+        //     `There is a missing file for ${targetKey} on the playlist that should be placed, MUST BE AROUND ${properTimes} BUT INSTEAD GOT ${actualTimes.map(t => t.substr(11, 5))}`
+        //   );
+        //   console.log("ERROR");
+        //   continue;
+        // }
 
         for (let j = 0; j < properTimes.length; j++) {
           const properTime = new Date(`2000-01-01T${properTimes[j]}`);
+
+          if (!actualTimes[j]) {
+            messArr.push(
+              `MISSING FILE ${targetKey} ON ${DateTime.fromJSDate(
+                properTime
+              ).toLocaleString(DateTime.TIME_24_SIMPLE)} SPAN`
+            );
+            continue;
+          }
           const actualTime = new Date(
             `2000-01-01T${actualTimes[j].substr(11, 5)}`
           );
