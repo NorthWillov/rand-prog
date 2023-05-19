@@ -24,7 +24,7 @@ export default {
     },
     {
       id: 2010,
-      program: "PRO_W23_Spotkanie",
+      program: "PRO_W23_Spotkanie_pop",
       counter: 0,
       duration: "00:38",
       info: "co drugi program od 13 maja do 4 czerwca",
