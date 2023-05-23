@@ -29,13 +29,6 @@ export default {
       duration: "00:38",
       info: "co drugi program od 13 maja do 4 czerwca",
     },
-    {
-      id: 2011,
-      program: "ADV_W23_PRAYER_FOR_UKRAINE",
-      counter: 0,
-      duration: "01:23",
-      info: "do 23 maja 2 razy na dobe miedzy 1 a 4 w nocy",
-    },
   ],
 
   PRO_Z23: [

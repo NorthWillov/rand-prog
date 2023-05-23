@@ -9,13 +9,9 @@ const TestFilesCorrectTimes = React.memo(({ filesCount }) => {
       times: ["09:00", "13:00", "15:00", "19:30", "22:30"],
       delay: 5,
     },
-    ADV_W23_PRAYER_FOR_UKRAINE: {
-      times: ["02:00", "04:00"],
-      delay: 60,
-    },
   };
 
-  const targetKeys = ["ADV_W23_IGLAK", "ADV_W23_PRAYER_FOR_UKRAINE"];
+  const targetKeys = ["ADV_W23_IGLAK"];
   const messArr = [];
 
   useEffect(() => {
