@@ -11,7 +11,7 @@ const TestFilesCorrectTimes = React.memo(({ filesCount }) => {
     },
     ADV_IGLAK_KW22_1: {
       times: [
-        "9:30",
+        "09:30",
         "10:30",
         "12:00",
         "13:00",
