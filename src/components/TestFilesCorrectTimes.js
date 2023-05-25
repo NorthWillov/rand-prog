@@ -23,7 +23,7 @@ const TestFilesCorrectTimes = React.memo(({ filesCount }) => {
       delay: 5,
     },
     ADV_W23_HILSONG: {
-      times: ["12:00", "14:00", "16:00", "18:00"],
+      times: ["12:00", "14:00", "16:00", "18:00", "20:00"],
       delay: 45,
     },
   };
