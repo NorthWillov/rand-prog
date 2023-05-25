@@ -41,7 +41,7 @@ export default {
       program: "ADV_W23_hilsong",
       counter: 0,
       duration: "00:31",
-      info: "do 9 czerwca, o godzinach: 12:00, 14:00, 16:00, 18:00",
+      info: "do 9 czerwca, o godzinach: 12:00, 14:00, 16:00, 18:00, 20:00",
     },
   ],
 
