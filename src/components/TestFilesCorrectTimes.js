@@ -55,9 +55,9 @@ const TestFilesCorrectTimes = React.memo(({ filesCount }) => {
 
           if (!actualTimes[j]) {
             messArr.push(
-              `MISSING FILE ${targetKey} ON ${DateTime.fromJSDate(
+              `Не вписаний ${targetKey} о такій годині ${DateTime.fromJSDate(
                 properTime
-              ).toLocaleString(DateTime.TIME_24_SIMPLE)} SPAN`
+              ).toLocaleString(DateTime.TIME_24_SIMPLE)}`
             );
             continue;
           }
@@ -72,20 +72,20 @@ const TestFilesCorrectTimes = React.memo(({ filesCount }) => {
             console.log(`"${targetKey}" is within the correct time range.`);
           } else {
             messArr.push(
-              `"${targetKey}" is NOT within the correct time range. Actual time has to be within ${
+              `"${targetKey}" не знаходиться у правильному проміжку часу. Має бути у проміжку +-${
                 filesInProperTime[targetKey].delay
-              } minutes time span! The time is ${DateTime.fromJSDate(
+              } хвилин! Час який вписаний - ${DateTime.fromJSDate(
                 actualTime
               ).toLocaleString(
                 DateTime.TIME_24_SIMPLE
-              )}, and has to be placed within this time ${DateTime.fromJSDate(
+              )}, а має бути у проміжку біля години ${DateTime.fromJSDate(
                 properTime
               ).toLocaleString(DateTime.TIME_24_SIMPLE)}`
             );
           }
         }
       } else {
-        messArr.push(`'${targetKey}' does not exist on the playlist.`);
+        messArr.push(`'${targetKey}' Не вписаний у плейлист`);
       }
     }
     setMessages(messArr);
