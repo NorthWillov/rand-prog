@@ -29,6 +29,20 @@ export default {
       duration: "00:38",
       info: "co drugi program od 13 maja do 4 czerwca",
     },
+    {
+      id: 2011,
+      program: "ADV_IGLAK_KW22_1",
+      counter: 0,
+      duration: "00:31",
+      info: "do 31 czerwca, o godzinach: 9:30, 10:30, 12:00, 13:00, 14:00, 16:00, 18:00, 20:00",
+    },
+    {
+      id: 2012,
+      program: "ADV_W23_hilsong",
+      counter: 0,
+      duration: "00:31",
+      info: "do 9 czerwca, o godzinach: 12:00, 14:00, 16:00, 18:00",
+    },
   ],
 
   PRO_Z23: [
