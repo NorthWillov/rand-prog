@@ -26,9 +26,18 @@ const TestFilesCorrectTimes = React.memo(({ filesCount }) => {
       times: ["12:00", "14:00", "16:00", "18:00", "20:00"],
       delay: 45,
     },
+    ADV_W23_MAJ_SZARON: {
+      times: ["19:00"],
+      delay: 60,
+    },
   };
 
-  const targetKeys = ["ADV_W23_IGLAK", "ADV_IGLAK_KW22_1", "ADV_W23_HILSONG"];
+  const targetKeys = [
+    "ADV_W23_IGLAK",
+    "ADV_IGLAK_KW22_1",
+    "ADV_W23_HILSONG",
+    "ADV_W23_MAJ_SZARON",
+  ];
   const messArr = [];
 
   useEffect(() => {

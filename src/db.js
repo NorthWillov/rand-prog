@@ -47,8 +47,15 @@ export default {
       id: 2013,
       program: "ADV_W23_hilsong",
       counter: 0,
-      duration: "00:31",
+      duration: "00:30",
       info: "do 9 czerwca, o godzinach: 12:00, 14:00, 16:00, 18:00, 20:00",
+    },
+    {
+      id: 2014,
+      program: "ADV_W23_MAJ_Szaron",
+      counter: 0,
+      duration: "01:01",
+      info: "do 26 czerwca, jeden raz dziennie, o godzinach: ~19:00",
     },
   ],
 
