@@ -33,7 +33,7 @@ const TestFilesCorrectTimes = React.memo(({ filesCount }) => {
         "18:00",
         "20:00",
         "22:00",
-        "24:00",
+        "23:59",
       ],
       delay: 360,
     },
