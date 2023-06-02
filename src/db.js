@@ -57,6 +57,13 @@ export default {
       duration: "01:01",
       info: "do 26 czerwca, jeden raz dziennie, o godzinach: ~19:00",
     },
+    {
+      id: 2015,
+      program: "ADV_W23_BSD_1",
+      counter: 0,
+      duration: "00:30",
+      info: "01:00, 01:30, 02:00, 02:30, 03:00, 04:00, 05:00, 06:00, 07:00, 08:00, 09:00, 10:00, 11:00, 12:00, 12:30, 13:00,13:30, 18:00, 19:00, 21:00, 22:00, 23:00",
+    },
   ],
 
   PRO_Z23: [
