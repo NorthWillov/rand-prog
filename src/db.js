@@ -37,13 +37,6 @@ export default {
       info: "do 31 czerwca, o godzinach: 9:30, 10:30, 12:00, 13:00, 14:00, 16:00, 18:00, 20:00",
     },
     {
-      id: 2013,
-      program: "ADV_W23_hilsong",
-      counter: 0,
-      duration: "00:30",
-      info: "do 9 czerwca, o godzinach: 10:00, 12:00, 14:00, 15:00, 16:00, 17:00, 18:00, 20:00, 22:00, 24:00",
-    },
-    {
       id: 2014,
       program: "ADV_W23_MAJ_Szaron",
       counter: 0,
