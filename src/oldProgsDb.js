@@ -11,4 +11,5 @@ export default [
   "PRO_W23_Spotkanie_pop",
   "ADV_AWM_0523",
   "ADV_W23_hilsong",
+  "PRO_reklama_zewnetrzna",
 ].map((spot) => spot.toUpperCase());
