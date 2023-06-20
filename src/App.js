@@ -44,18 +44,6 @@ function App() {
           setProgs={setProgs}
         />
         <Programs
-          color={"yellow"}
-          title={"REG"}
-          progs={progs}
-          setProgs={setProgs}
-        />
-        <Programs
-          color={"blue"}
-          title={"DYL"}
-          progs={progs}
-          setProgs={setProgs}
-        />
-        <Programs
           color={"black"}
           title={"PRO_PO_WER"}
           progs={progs}
@@ -70,12 +58,6 @@ function App() {
         <Programs
           color={"cornflowerblue"}
           title={"PRO_PO_LAF"}
-          progs={progs}
-          setProgs={setProgs}
-        />
-        <Programs
-          color={"pink"}
-          title={"UPOMNIKI"}
           progs={progs}
           setProgs={setProgs}
         />

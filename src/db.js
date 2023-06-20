@@ -85,30 +85,14 @@ export default {
   ],
 
   PRO_WEEK: [
-    { id: -1, program: "PRO_W23_WTCZ_ITME", counter: 0, duration: "00:30" },
     { id: 0, program: "PRO_Z23_PREM_AWM", counter: 0, duration: "00:30" },
     { id: 1, program: "PRO_W23_WTCZ_KWMZ", counter: 0, duration: "00:30" },
     { id: 2, program: "PRO_W22_PNCZ_PPM", counter: 0, duration: "00:30" },
-    { id: 3, program: "PRO_W22_PN_ZNZ", counter: 0, duration: "00:30" },
-    { id: 4, program: "PRO_W22_PNSR_SMKTN", counter: 0, duration: "00:30" },
-    { id: 5, program: "PRO_W22_PNWT_TTR", counter: 0, duration: "00:30" },
-    { id: 7, program: "PRO_W22_PNPT_MLYGTT", counter: 0, duration: "00:30" },
-    { id: 8, program: "PRO_W22_SR_RMO", counter: 0, duration: "00:30" },
-    { id: 9, program: "PRO_W22_PNSR_PZ", counter: 0, duration: "00:30" },
-    { id: 10, program: "PRO_W22_SRPT_WIM", counter: 0, duration: "00:30" },
-    { id: 11, program: "PRO_W22_PNSR_TMCH", counter: 0, duration: "00:30" },
-    { id: 12, program: "PRO_W22_CZ_DS", counter: 0, duration: "00:30" },
-    { id: 13, program: "PRO_W22_SRCZPT_DWAWG", counter: 0, duration: "00:30" },
-    { id: 14, program: "PRO_W22_WTCZ_DTH", counter: 0, duration: "00:30" },
-    { id: 15, program: "PRO_Z22_SB_DTH_S7", counter: 0, duration: "00:29" },
-    { id: 16, program: "PRO_W22_PT_ITA", counter: 0, duration: "00:30" },
-    { id: 17, program: "PRO_W22_PTND_JPLLGL", counter: 0, duration: "00:30" },
-    { id: 18, program: "PRO_W22_PTND_VOTR", counter: 0, duration: "00:30" },
-    { id: 19, program: "PRO_W22_SRPT_RTS", counter: 0, duration: "00:30" },
-    { id: 21, program: "PRO_W22_SB_SOD", counter: 0, duration: "00:30" },
-    { id: 22, program: "PRO_W22_SB_PODR", counter: 0, duration: "00:30" },
-    { id: 23, program: "PRO_W22_ND_JOEL", counter: 0, duration: "00:30" },
-    { id: 24, program: "PRO_W22_ND_ATVRM", counter: 0, duration: "00:30" },
+    { id: 3, program: "PRO_W22_PNSR_TMCH", counter: 0, duration: "00:30" },
+    { id: 4, program: "PRO_W22_CZ_DS", counter: 0, duration: "00:30" },
+    { id: 5, program: "PRO_W22_WTCZ_DTH", counter: 0, duration: "00:30" },
+    { id: 6, program: "PRO_W22_ND_JOEL", counter: 0, duration: "00:30" },
+    { id: 7, program: "PRO_W22_ND_ATVRM", counter: 0, duration: "00:30" },
   ],
 
   PRO_LONG: [
@@ -116,23 +100,6 @@ export default {
     { id: 27, program: "pro_w19_wszyscy", counter: 0, duration: "00:19" },
     { id: 29, program: "PRO_W23_MISJA", counter: 0, duration: "01:01" },
     { id: 30, program: "pro_j21_roman_road", counter: 0, duration: "02:10" },
-  ],
-
-  REG: [
-    { id: 32, program: "REG_107", counter: 0, duration: "07:17" },
-    { id: 33, program: "REG_105", counter: 0, duration: "09:00" },
-    { id: 34, program: "REG_102", counter: 0, duration: "09:51" },
-    { id: 35, program: "REG_103", counter: 0, duration: "10:08" },
-    { id: 36, program: "REG_104", counter: 0, duration: "10:19" },
-    { id: 37, program: "REG_101", counter: 0, duration: "12:06" },
-  ],
-
-  DYL: [
-    { id: 40, program: "dyl_108", counter: 0, duration: "07:10" },
-    { id: 41, program: "dyl_101", counter: 0, duration: "08:28" },
-    { id: 42, program: "dyl_102", counter: 0, duration: "08:31" },
-    { id: 43, program: "dyl_107", counter: 0, duration: "08:45" },
-    { id: 44, program: "dyl_106", counter: 0, duration: "09:26" },
   ],
 
   PRO_PO_WER: [
@@ -160,13 +127,6 @@ export default {
     { id: 62, program: "PRO_W22_PO_LAF_3", counter: 0, duration: "01:22" },
     { id: 63, program: "PRO_W22_PO_LAF_2", counter: 0, duration: "01:32" },
     { id: 64, program: "PRO_W22_PO_LAF_6", counter: 0, duration: "01:32" },
-  ],
-
-  UPOMNIKI: [
-    { id: 65, program: "PRO_W19_Heidi", counter: 0, duration: "00:06" },
-    { id: 66, program: "PRO_W19_Huckabee", counter: 0, duration: "00:06" },
-    { id: 67, program: "PRO_W19_Musial", counter: 0, duration: "00:07" },
-    { id: 68, program: "PRO_W19_Todd", counter: 0, duration: "00:07" },
   ],
 
   ID: [
