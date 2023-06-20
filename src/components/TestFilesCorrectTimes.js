@@ -26,7 +26,7 @@ const TestFilesCorrectTimes = React.memo(({ filesCount }) => {
       times: ["19:00"],
       delay: 60,
     },
-    ADV_W23_BSD_1: {
+    ADV_W23_BSD_2: {
       times: [
         "01:00",
         "01:30",
@@ -59,7 +59,7 @@ const TestFilesCorrectTimes = React.memo(({ filesCount }) => {
     "ADV_W23_IGLAK",
     "ADV_IGLAK_KW22_1",
     "ADV_W23_MAJ_SZARON",
-    "ADV_W23_BSD_1",
+    "ADV_W23_BSD_2",
   ];
   const messArr = [];
 
