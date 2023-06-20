@@ -24,10 +24,10 @@ export default {
     },
     {
       id: 2011,
-      program: "PRO_PREM_W23_MOTM",
+      program: "PRO_W23_WTCZW_ITME_S2",
       counter: 0,
-      duration: "00:29",
-      info: "Do 20 czerwca",
+      duration: "00:56",
+      info: "Po 20 czerwca",
     },
     {
       id: 2012,

@@ -46,4 +46,5 @@ export default [
   "PRO_Z22_SB_DTH_S7",
   "PRO_W23_WTCZ_ITME",
   "PRO_PREM_W23_MOTM",
+  "PRO_PREM_ITME_S2",
 ].map((spot) => spot.toUpperCase());
