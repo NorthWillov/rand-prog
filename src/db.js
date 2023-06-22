@@ -121,11 +121,13 @@ export default {
 
   PRO_PO_LAF: [
     { id: 59, program: "PRO_W22_PO_LAF_1", counter: 0, duration: "00:56" },
-    { id: 60, program: "PRO_W22_PO_LAF_5", counter: 0, duration: "01:16" },
-    { id: 61, program: "PRO_W22_PO_LAF_4", counter: 0, duration: "01:20" },
-    { id: 62, program: "PRO_W22_PO_LAF_3", counter: 0, duration: "01:22" },
-    { id: 63, program: "PRO_W22_PO_LAF_2", counter: 0, duration: "01:32" },
-    { id: 64, program: "PRO_W22_PO_LAF_6", counter: 0, duration: "01:32" },
+    { id: 60, program: "PRO_L23_PO_LAF_8", counter: 0, duration: "01:15" },
+    { id: 61, program: "PRO_W22_PO_LAF_5", counter: 0, duration: "01:16" },
+    { id: 62, program: "PRO_W22_PO_LAF_4", counter: 0, duration: "01:20" },
+    { id: 63, program: "PRO_W22_PO_LAF_3", counter: 0, duration: "01:22" },
+    { id: 64, program: "PRO_W22_PO_LAF_2", counter: 0, duration: "01:32" },
+    { id: 65, program: "PRO_W22_PO_LAF_6", counter: 0, duration: "01:32" },
+    { id: 66, program: "PRO_L23_PO_LAF_7", counter: 0, duration: "02:37" },
   ],
 
   ID: [
