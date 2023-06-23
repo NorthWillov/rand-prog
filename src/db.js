@@ -23,20 +23,6 @@ export default {
       info: "co drugi program",
     },
     {
-      id: 2011,
-      program: "PRO_W23_WTCZW_ITME_S2",
-      counter: 0,
-      duration: "00:56",
-      info: "Po 20 czerwca",
-    },
-    {
-      id: 2012,
-      program: "PRO_W23_WT_MOTM",
-      counter: 0,
-      duration: "00:29",
-      info: "Po 20 czerwca",
-    },
-    {
       id: 2013,
       program: "ADV_W23_iglak",
       counter: 0,
@@ -93,6 +79,12 @@ export default {
     { id: 5, program: "PRO_W22_WTCZ_DTH", counter: 0, duration: "00:30" },
     { id: 6, program: "PRO_W22_ND_JOEL", counter: 0, duration: "00:30" },
     { id: 7, program: "PRO_W22_ND_ATVRM", counter: 0, duration: "00:30" },
+    { id: 7, program: "PRO_L23_WT_ITME_202v2", counter: 0, duration: "00:29" },
+    { id: 7, program: "PRO_L23_J_ITME_202v2", counter: 0, duration: "00:29" },
+    { id: 7, program: "PRO_L23_D_ITME_202v2", counter: 0, duration: "00:29" },
+    { id: 7, program: "PRO_L23_WT_MOTM_102v2", counter: 0, duration: "00:30" },
+    { id: 7, program: "PRO_L23_J_MOTM_102v2", counter: 0, duration: "00:30" },
+    { id: 7, program: "PRO_L23_D_MOTM_102v2", counter: 0, duration: "00:30" },
   ],
 
   PRO_LONG: [
