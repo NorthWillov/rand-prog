@@ -140,14 +140,14 @@ function XmlForm({ progs, setProgs }) {
           Submit
         </button>
       </div>
-      <label style={{ margin: "0 auto 50px" }}>
+      {/* <label style={{ margin: "0 auto 50px" }}>
         <input
           type="checkbox"
           checked={isTestFilesTimesChecked}
           onChange={handleCheckboxChange}
         />
         Submit with checks of files that are in the correct times
-      </label>
+      </label> */}
       {Object.keys(filesCount).length !== 0 && (
         <>
           {showTestFilesTimesChecked && (
